@@ -1,0 +1,2 @@
+class CircularDependencyError(Exception):
+    pass
