@@ -1,5 +1,5 @@
 import pytest
-from src.turbolightdi.container import TurboLightDIContainer
+from turbolightdi.container import TurboLightDIContainer
 
 
 def borg(func):
