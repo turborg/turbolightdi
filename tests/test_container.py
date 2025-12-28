@@ -1,5 +1,5 @@
 import pytest
-from turbodi.container import TurboDIContainer
+from src.turbolightdi.container import TurboLightDIContainer
 
 
 def borg(func):
@@ -10,7 +10,7 @@ def borg(func):
 class TestContainer:
     @pytest.fixture
     def container(self):
-        return TurboDIContainer()
+        return TurboLightDIContainer()
 
     def test_singleton_management(self, container):
         """Verifies that the container returns the same instance twice."""
@@ -29,7 +29,7 @@ class TestContainer:
 
         class Repository:
             def __init__(self):
-                self.data = "turbodi_data"
+                self.data = "turbolightdi_data"
 
         class Service:
             def __init__(self, repo: Repository):
@@ -38,7 +38,7 @@ class TestContainer:
         service = container.resolve_dep(Service)
 
         assert isinstance(service.repo, Repository)
-        assert service.repo.data == "turbodi_data"
+        assert service.repo.data == "turbolightdi_data"
 
     def test_borg_provider_resolution(self, container):
         """Verifies that @borg methods in a @cy class provide dependencies."""

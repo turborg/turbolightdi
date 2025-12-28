@@ -1,7 +1,7 @@
 import inspect
 from typing import TypeVar, Callable, Any
 
-from turbodi.container import context
+from turbolightdi.container import context
 
 T = TypeVar("T", bound=type)
 F = TypeVar("F", bound=Callable[..., Any])

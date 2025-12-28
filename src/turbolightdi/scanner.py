@@ -5,7 +5,7 @@ import pkgutil
 import importlib
 from typing import Any
 
-from turbodi.container import context
+from turbolightdi.container import context
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"

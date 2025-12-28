@@ -10,7 +10,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-class TurboDIContainer:
+class TurboLightDIContainer:
     def __init__(self):
         self._initialized = False
         # @Cy's
@@ -89,4 +89,4 @@ class TurboDIContainer:
         return instance
 
 
-context: TurboDIContainer = TurboDIContainer()
+context: TurboLightDIContainer = TurboLightDIContainer()

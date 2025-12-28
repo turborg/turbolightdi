@@ -61,3 +61,10 @@ include = ["src"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/turbolightdi"]
+
+[tool.mypy]
+python_version = "3.12"
+mypy_path = "src"
+explicit_package_bases = true
+namespace_packages = true
+strict = true
