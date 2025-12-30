@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://turborg.com/TurboLightDI" target="_blank">
-<img src="https://i.postimg.cc/4dwfgzNr/TurboLightDItransparent.png" alt="TurboLightDI Logo" width="400px">
+<img src="https://i.postimg.cc/TPTSD04k/turbolightdi.png" alt="TurboLightDI Logo" width="400px">
 </a>
 </p>
 
@@ -64,10 +64,10 @@ Use these decorators to integrate third-party libraries (like Redis, SQLAlchemy 
 * **`@cy` (Configuration Yield)**: A class-level decorator for modules that house the configurations required to yield the objects your application needs.
 * **`@borg` (Bound Object Resource Graph)**: A method-level decorator used within a `@cy` class. It holds and registers third-party libraries as assimilated components in the DI graph.
 
-### Internal Logic (Components)
+### Internal Logic (components)
 For classes created within your own codebase, use the following decorators to enable auto DI:
 
-* **`@Component`**: The base decorator for any general-purpose class managed by the TurboLightDIContainer.
+* **`@component`**: The base decorator for any general-purpose class managed by the TurboLightDIContainer.
 
 #### Specialized Components
 To maintain clean architectural separation, use these specific aliases:
