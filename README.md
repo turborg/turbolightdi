@@ -8,13 +8,39 @@
 
 ![Python Versions](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue?style=flat-square)
 ![Development Status](https://img.shields.io/badge/status-Alpha-orange?style=flat-square)
-
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/turbolightdi?period=total&units=INTERNATIONAL_SYSTEM&left_color=GREY&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/turbolightdi)
 </div>
 
 <p align="center">
 TurboLightDI is a lightweight, high-performance Inversion of Control container for Python.
 </p>
 
+## Usage
+**TurboLightDI** uses a special hierarchy to manage your application's lifecycle. Components are divided into **External Components** and **Internal Logic**.
+
+### Install
+```bash
+pip install turbolightdi
+```
+### Quick Example
+```python
+from TurboLightDI import cy, borg, service, repository
+
+@cy
+class DatabaseConfig:
+    @borg
+    def session_factory(self) -> Session:
+        return create_session_factory()
+
+@repository
+class UserRepository(TurboquentRepository):
+    pass
+
+@service
+class UserService:
+    def __init__(self, user_repository: UserRepository):
+        self.user_repository = user_repository
+```
 
 ## About TurboLightDI
 
@@ -34,29 +60,6 @@ Core features:
 uv venv --python 3.12
 uv pip install .[dev]
 pre-commit install
-```
-
-## Usage
-**TurboLightDI** uses a special hierarchy to manage your application's lifecycle. Components are divided into **External Components** and **Internal Logic**.
-
-### Quick Example
-```python
-from TurboLightDI import cy, borg, service, repository
-
-@cy
-class DatabaseConfig:
-    @borg
-    def session_factory(self) -> Session:
-        return create_session_factory()
-
-@repository
-class UserRepository(TurboquentRepository):
-    pass
-
-@service
-class UserService:
-    def __init__(self, user_repository: UserRepository):
-        self.user_repository = user_repository
 ```
 
 ### External Integration
