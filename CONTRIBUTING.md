@@ -71,3 +71,6 @@ We follow a basic conventional commit format:
 If you have any questions, feel free to open a discussion or an issue labeled `question`. We’re happy to help!
 
 **Thank you for your contribution!**
+
+---
+*Part of the [**Turborg**](https://turborg.com) AI-First Open Source Suite Ecosystem*
