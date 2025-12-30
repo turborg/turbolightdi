@@ -6,8 +6,8 @@ build-backend = "hatchling.build"
 # PEP 621 Standard
 [project]
 name = "turbolightdi"
-version = "0.1.0"
-description = "TurboLightDI: TurboLightDI is a lightweight, high-performance Inversion of Control (IoC) container."
+version = "0.1.1"
+description = "TurboLightDI is a lightweight, high-performance Inversion of Control (IoC) container."
 readme = "README.md"
 license = { text = "MIT" }
 license-files = ["LICENSE"]
